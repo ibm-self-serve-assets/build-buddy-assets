@@ -1,0 +1,9 @@
+spec_version: v1
+kind: knowledge_base
+name: product_catalog_kb
+description: >
+  Contains detailed information about InnovateTech Solutions' product offerings, including SKUs, descriptions, features, and pricing tiers for the QuantumLeap CRM, DataWeave BI, and SecureFlow Cybersecurity products. Use this to answer questions about product capabilities and pricing.
+documents:
+  - "knowledge_base/documents/InnovateTech_Product_Catalog.txt"
+vector_index:
+  embeddings_model_name: ibm/slate-125m-english-rtrvr-v2
