@@ -1,0 +1,13 @@
+# knowledge_bases/internal_support_kb.yaml
+spec_version: v1
+kind: knowledge_base 
+name: internal_support_kb
+description: >
+   Contains internal company documents including HR policies, IT troubleshooting guides, and general office information. 
+   Use this to answer employee questions about remote work, vacation policies, guest access, and common technical issues.
+documents:
+   - "knowledge_docs/FAQs.pdf"
+   - "knowledge_docs/Troubleshooting_Guide.docx"
+vector_index:
+   # Using the default embedding model for simplicity
+   embeddings_model_name: ibm/slate-125m-english-rtrvr-v2
