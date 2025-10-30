@@ -1,0 +1,26 @@
+spec_version: v1
+    kind: knowledge_base 
+    name: empower_kb
+    description: >
+      A knowledge base containing answers to frequently asked questions (FAQs) for employees. 
+      It covers topics such as company policies, HR procedures, IT support, and benefits information.
+    documents:
+      - "knowledge_base/employee_faqs.txt"
+    vector_index:
+      embeddings_model_name: ibm/slate-125m-english-rtrvr-v2
+    ```
+
+## Step 2: Create the Agent Tools
+
+Tools are the functional building blocks of agents, allowing them to interact with external systems and perform actions. We will create six distinct Python-based tools, three for customer care and three for ServiceNow, each populated with realistic synthetic data.
+
+### 2.1 Customer Care Tools
+
+These tools empower the `customer_care_agent` to answer questions about healthcare plans, claims, and providers.
+
+#### `get_healthcare_benefits.py`
+
+*   **Business Value**: This tool provides employees with on-demand access to detailed health plan information, enabling them to compare plans and understand their coverage without needing to contact HR. This self-service capability is crucial during open enrollment or when employees have questions about specific medical procedures.
+*   **Technical Implementation**: The Python function uses Pydantic models for structured input (`Plan` Enum) and returns a filtered list of benefits from a comprehensive synthetic dataset. It simulates calling an internal benefits API.
+
+`tools/customer_care/get_healthcare_benefits.py`:
