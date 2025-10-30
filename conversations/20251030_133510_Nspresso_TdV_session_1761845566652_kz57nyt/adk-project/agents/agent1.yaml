@@ -1,0 +1,11 @@
+spec_version: v1
+kind: knowledge_base
+name: regulatory_kb
+description: >
+  Contains FinCorp's internal compliance policies, including transaction monitoring thresholds,
+  rules for anomaly detection, and guidelines for handling high-risk activities. Use this to
+  cross-reference transactions and analysis against official company policy.
+documents:
+  - "./knowledge_base/docs/fincorp_compliance_policy_v1.2.txt"
+vector_index:
+  embeddings_model_name: ibm/slate-125m-english-rtrvr-v2
